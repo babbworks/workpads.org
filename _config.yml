@@ -34,9 +34,13 @@ plugins:
   - jekyll-paginate
 
 header_pages:
-  - pages/index.md
-  - pages/about.md
-  - pages/contact.md
+  - pages/spec.md
+  - pages/pitch.md
+  - pages/standards.md
+  - pages/releases.md
+  - pages/contribute.md
+
+
 
 
 
