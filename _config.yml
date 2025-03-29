@@ -34,10 +34,11 @@ plugins:
   - jekyll-paginate
 
 header_pages:
-  - pages/spec.md
+  - pages/app.md
+  - pages/specs.md
   - pages/pitch.md
-  - pages/standards.md
   - pages/releases.md
+  - pages/standards.md
   - pages/contribute.md
 
 
