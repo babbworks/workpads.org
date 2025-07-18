@@ -1,0 +1,20 @@
+Workpads is a branch of the 'Business Assistance System' (<a href="https://basics.babb.tel/">BASICS</a>). Technical development of Workpads aligns with standards established for BASICS but will remain uneffected by upstream product designs & commercial partnerships.<br>
+
+header_pages:
+  - pages/project/app.md
+  # - pages/project/specs.md
+  - pages/pitch.md
+  - pages/project/releases.md
+  - pages/project/standards.md
+  - pages/contribute.md
+
+
+  <a href="/templates">Template Operation</a><br>
+  <a href="/compression">Content Compression</a><br>
+  <a href="/encoding">Content Encoding</a><br>
+  <a href="/encryption">Content Encryption</a><br>
+
+  <a href="/pads/design">Design</a><br>
+  <a href="/pads/display">Display</a><br>
+  <a href="/pads/creation">Creation</a><br>
+  <a href="/pads/formulas">Formulas</a><br>

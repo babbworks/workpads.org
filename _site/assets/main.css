@@ -110,13 +110,15 @@ table td { border: 1px solid #edecec; }
 
 .footer-col { float: left; margin-bottom: 15px; padding-left: 15px; }
 
-.footer-col-1 { width: -webkit-calc(26.5% - (30px / 2)); width: calc(26.5% - (30px / 2)); }
+.footer-col-1 { width: -webkit-calc(20% - (30px / 2)); width: calc(20% - (30px / 2)); }
 
-.footer-col-2 { width: -webkit-calc(20% - (30px / 2)); width: calc(20% - (30px / 2)); }
+.footer-col-2 { width: -webkit-calc(15% - (30px / 2)); width: calc(15% - (30px / 2)); }
 
-.footer-col-3 { width: -webkit-calc(26.5% - (30px / 2)); width: calc(26.5% - (30px / 2)); }
+.footer-col-3 { width: -webkit-calc(15% - (30px / 2)); width: calc(15% - (30px / 2)); }
 
-.footer-col-4 { width: -webkit-calc(26.5% - (30px / 2)); width: calc(26.5% - (30px / 2)); }
+.footer-col-4 { width: -webkit-calc(20% - (30px / 2)); width: calc(20% - (30px / 2)); }
+
+.footer-col-5 { width: -webkit-calc(30% - (30px / 2)); width: calc(30% - (30px / 2)); }
 
 @media screen and (max-width: 1100px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - (30px / 2)); }
   .footer-col-3 { width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }

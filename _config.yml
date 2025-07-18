@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: workpads.org
-email: hello@workpads.org
+email: workpads@babb.tel
 description: >- # this means to ignore newlines until "baseurl:"
   Tools for Work
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -33,14 +33,24 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-header_pages:
-  - pages/app.md
-  - pages/specs.md
-  - pages/pitch.md
-  - pages/releases.md
-  - pages/standards.md
-  - pages/contribute.md
 
+
+minima:
+  navigation:
+    - title: ".app"
+      url: "https:workpads.app"
+    - title: "Roadmap"
+      url: "/roadmap"
+    - title: "Contribute"
+      url: "/contribute"
+    - title: "Tests"
+      url: "/tests"
+    - title: "Releases"
+      url: "/releases"
+    - title: "Standard"
+      url: "https://github.com/yourusername"
+    - title: "BABB"
+      url: "https://babb.tel"
 
 
 

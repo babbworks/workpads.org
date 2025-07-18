@@ -3,11 +3,11 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading"></b>workpads.org </b></h2>
+    <h2 class="footer-heading"></b>Documents for the frontier.</b></h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <h2 class="footer-heading">Project</h2>
+        <h2 class="footer-heading">WORKPADS</h2>
         <ul class="contact-list">
           <li class="p-name">
             </li>
@@ -25,38 +25,50 @@
       </div>
 
       <div class="footer-col footer-col-2">
-        <h2 class="footer-heading">Links  </h2>
+        <h2 class="footer-heading">SOCIAL</h2>
         {%- include social.html -%}
-        <h2 class="footer-heading">Community</h2>
+        <h2 class="footer-heading">COMMUNITY</h2>
         <a href="https://discord.workpads.org">Discord</a><br>
 
       </div>
 
       <div class="footer-col footer-col-3">
-        <h2 class="footer-heading">Technical</h2>
-        <a href="/protocol">Workpads Protocol</a><br>
-        <a href="/templates">Template Operation</a><br>
-        <a href="/compression">Content Compression</a><br>
-        <a href="/encoding">Content Encoding</a><br>
-        <a href="/encryption">Content Encryption</a><br>
+        <h2 class="footer-heading">PROJECT</h2>
+        <a href="/contribute">Contribute</a><br>
+
 
 
 
       </div>
 
       <div class="footer-col footer-col-4">
-        <h2 class="footer-heading">Workpads</h2>
-        <a href="/pads/design">Design</a><br>
-        <a href="/pads/display">Display</a><br>
-        <a href="/pads/creation">Creation</a><br>
-        <a href="/pads/formulas">Formulas</a><br>
+        <h2 class="footer-heading">TECHNICAL</h2>
+        <a href="https://workpads.babb.tel">Standard (Gitbook)</a><br>
+
+
+
+
+      </div>
+
+     
+
+      <div class="footer-col footer-col-5">
+        <h2 class="footer-heading">UPDATES</h2>
+
+          {% for post in site.posts limit:10 %}      <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+      
+
 
 
       </div>
 
     </div>
     <br><hr><br>
-    <p>Built by <a href="/common-questions">Babb.</a></p>
+    <p>Built by <a href="https://www.babb.tel">Babb.</a></p>
 
 
   </div>
