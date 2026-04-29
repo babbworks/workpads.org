@@ -1,0 +1,85 @@
+<div class="site-footer-wrap" role="contentinfo">
+  <button class="footer-tab" id="footer-toggle" aria-expanded="false" aria-controls="footer-drawer">
+    <span class="tab-label">Workpads Standard</span>
+    <span class="tab-domain">workpads@babb.tel</span>
+    <span class="tab-label">·</span>
+    <span class="tab-label">Built by Babb</span>
+    <span class="tab-arrow" aria-hidden="true">↑</span>
+  </button>
+
+  <div class="footer-drawer" id="footer-drawer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <h4>Standard</h4>
+          <ul>
+            <li><a href="/standard">All Sections</a></li>
+            <li><a href="https://github.com/babbworks/workpads-standard/blob/master/pads-model.md">§1 PADS Model</a></li>
+            <li><a href="https://github.com/babbworks/workpads-standard/blob/master/record-schema.md">§2 Record Schema</a></li>
+            <li><a href="https://github.com/babbworks/workpads-standard/blob/master/codec.md">§5 Codec</a></li>
+            <li><a href="https://github.com/babbworks/workpads-standard/blob/master/basics-conformance.md">§8 BASICS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="/contribute">Contribute</a></li>
+            <li><a href="https://github.com/babbworks/Workpads/discussions">GitHub Discussions</a></li>
+            <li><a href="https://github.com/babbworks/Workpads/projects?query=is%3Aopen">Projects</a></li>
+            <li><a href="{{ "/feed.xml" | relative_url }}">RSS Feed</a></li>
+          </ul>
+          <h4 style="margin-top:16px">Products</h4>
+          <ul>
+            <li><a href="https://workpads.org">workpads.org</a></li>
+            <li><a href="https://workpads.app">workpads.app</a></li>
+            <li><a href="https://workpads.me">workpads.me</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Updates</h4>
+          <ul>
+            {% for post in site.posts limit:7 %}
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <a href="/updates" style="display:block;margin-top:10px;font-size:0.75rem;color:#7ab882;text-decoration:none">All updates →</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Babb</h4>
+          <ul>
+            <li><a href="https://babb.tel">babb.tel</a></li>
+            <li><a href="mailto:workpads@babb.tel">workpads@babb.tel</a></li>
+          </ul>
+          <h4 style="margin-top:16px">Ecosystem</h4>
+          <ul>
+            <li><a href="/ecosystem">All Repos</a></li>
+            <li><a href="https://github.com/babbworks">GitHub</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>Workpads Standard v0.1 &middot; Open Standard &middot; <a href="/contribute#conformance">Conformance &amp; Use</a></span>
+        <span>Built by <a href="https://babb.tel">Babb</a> &middot; <a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('footer-toggle');
+  var drawer = document.getElementById('footer-drawer');
+  if (!btn || !drawer) return;
+
+  btn.addEventListener('click', function () {
+    var open = drawer.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>

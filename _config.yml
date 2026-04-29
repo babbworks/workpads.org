@@ -1,0 +1,39 @@
+title: workpads.org
+email: workpads@babb.tel
+description: >-
+  An open record format and protocol for portable, sovereign, URL-transmissible
+  commercial records. Built by Babb.
+baseurl: ""
+url: "https://standard.workpads.org"
+twitter_username: workpads
+github_username: babbworks
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+minima:
+  navigation:
+    - title: ".app"
+      url: "https://workpads.app"
+    - title: ".me"
+      url: "https://workpads.me"
+    - title: "Standard"
+      url: "/standard"
+    - title: "Ecosystem"
+      url: "/ecosystem"
+    - title: "Contribute"
+      url: "/contribute"
+
+paginate: 12
+paginate_path: "/updates/page:num/"
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules/
