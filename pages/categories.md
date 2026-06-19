@@ -4,42 +4,25 @@ title: Categories
 permalink: /categories
 ---
 
-<div class="wrapper">
-  <div class="page-wrapper">
-    <div class="page-header">
-      <p class="page-eyebrow">Workpads Standard</p>
-      <h1>Categories</h1>
-    </div>
+<div class="page">
+  <div class="container">
+    <p class="structural">Browse</p>
+    <h1 class="page-title">CATEGORIES</h1>
 
-    {% assign cats = site.categories | sort %}
-    {% if cats.size > 0 %}
-    <ul class="category-index">
-      {% for category in cats %}
-        {% assign cat_name = category[0] %}
-        {% assign cat_posts = category[1] %}
-        <li class="category-index-item">
-          <a href="/categories/{{ cat_name | slugify }}" class="cat-index-link">
-            <span class="cat-index-name">{{ cat_name }}</span>
-            <span class="cat-index-count">{{ cat_posts.size }} post{% if cat_posts.size != 1 %}s{% endif %}</span>
-          </a>
-          <ul class="cat-post-list">
-            {% for post in cat_posts limit:3 %}
-            <li>
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              <span class="label-mono">{{ post.date | date: "%Y-%m-%d" }}</span>
-            </li>
-            {% endfor %}
-            {% if cat_posts.size > 3 %}
-            <li class="cat-more">
-              <a href="/categories/{{ cat_name | slugify }}">+{{ cat_posts.size | minus: 3 }} more →</a>
-            </li>
-            {% endif %}
-          </ul>
-        </li>
+    <div style="margin-top:2rem;">
+      {% for category in site.categories %}
+      <div style="margin-bottom:2rem;">
+        <h3 style="color:var(--accent);text-transform:uppercase;font-size:1.2rem;">{{ category[0] }}</h3>
+        <ul class="post-list">
+          {% for post in category[1] %}
+          <li class="post-item">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
       {% endfor %}
-    </ul>
-    {% else %}
-    <p style="color:var(--text-muted)">No categories yet.</p>
-    {% endif %}
+    </div>
   </div>
 </div>

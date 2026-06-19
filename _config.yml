@@ -1,31 +1,30 @@
-title: workpads.org
+title: workpads
 email: workpads@babb.tel
 description: >-
-  An open record format and protocol for portable, sovereign, URL-transmissible
-  commercial records. Built by Babb.
+  No server. No account. No data. Your records live on your device.
+  We are structurally unable to read them.
 baseurl: ""
-url: "https://standard.workpads.org"
+url: "https://workpads.org"
 twitter_username: workpads
 github_username: babbworks
-
-theme: minima
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
 
-minima:
-  navigation:
-    - title: ".app"
-      url: "https://workpads.app"
-    - title: ".me"
-      url: "https://workpads.me"
-    - title: "Standard"
-      url: "/standard"
-    - title: "Ecosystem"
-      url: "/ecosystem"
-    - title: "Contribute"
-      url: "/contribute"
+permalink: /updates/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"
 
 paginate: 12
 paginate_path: "/updates/page:num/"

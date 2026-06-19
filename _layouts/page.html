@@ -2,16 +2,17 @@
 layout: default
 ---
 
-<div class="wrapper">
-  <div class="page-wrapper{% if page.wide %} wide{% endif %}">
-    <div class="page-header">
-      {% if page.eyebrow %}<p class="page-eyebrow">{{ page.eyebrow }}</p>{% endif %}
-      <h1>{{ page.title | escape }}</h1>
-      {% if page.subtitle %}<p class="page-sub">{{ page.subtitle }}</p>{% endif %}
-    </div>
-
-    <div class="page-body">
+<article class="page">
+  <div class="container">
+    {% if page.eyebrow %}
+    <p class="structural">{{ page.eyebrow }}</p>
+    {% endif %}
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="page-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="page-content {% if page.wide %}page-content--wide{% endif %}">
       {{ content }}
     </div>
   </div>
-</div>
+</article>

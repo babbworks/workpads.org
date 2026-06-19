@@ -2,30 +2,23 @@
 layout: default
 ---
 
-<div class="wrapper">
-  <div class="page-wrapper">
-    <div class="category-header">
-      <p class="cat-eyebrow">Category</p>
-      <h1>{{ page.category }}</h1>
-    </div>
+<div class="page">
+  <div class="container">
+    <p class="structural">Category</p>
+    <h1 class="page-title">{{ page.title }}</h1>
 
-    {% assign cat_posts = site.categories[page.category] %}
-    {% if cat_posts.size > 0 %}
-    <ul class="updates-list">
-      {% for post in cat_posts %}
-      <li>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        {% if post.excerpt %}
-        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    <ul class="post-list" style="margin-top:2rem;">
+      {% assign category = page.category | default: page.title | downcase %}
+      {% for post in site.posts %}
+        {% if post.categories contains category %}
+        <li class="post-item">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="post-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+        </li>
         {% endif %}
-        <div class="post-meta-row">
-          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-        </div>
-      </li>
       {% endfor %}
     </ul>
-    {% else %}
-    <p style="color:var(--text-muted)">No posts in this category yet.</p>
-    {% endif %}
+
+    <p class="back-link" style="margin-top:2rem;"><a href="/updates">← All updates</a></p>
   </div>
 </div>
